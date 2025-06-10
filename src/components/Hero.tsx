@@ -71,10 +71,25 @@ const Hero = () => {
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
             </Button>
-            <Button onClick={handleDownloadResume} variant="outline" size="lg" className="text-lg px-8 hover:scale-105 transition-transform">
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
-            </Button>
+            <a
+              href="/Dhara.pdf"
+              download="Dhara_Thakkar_Resume.pdf"
+              className="inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 hover:scale-105 transition-transform"
+              >
+                <>
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </>
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>
