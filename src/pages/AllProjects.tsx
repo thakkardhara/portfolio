@@ -53,8 +53,8 @@ const allProjects = [
     title: "Portfolio Website",
     description: "Responsive portfolio website showcasing projects, skills, and experience. Built with modern web technologies and optimized for performance.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/thakkardharaine",
-    liveUrl: "https://dharathakkar.dev",
+    githubUrl: "https://github.com/thakkardhara/portfolio",
+    liveUrl: "https://dhara-portfolio-gamma.vercel.app/",
     // category: "Personal"
     image: "/portfolio.png"
   }
