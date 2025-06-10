@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
@@ -54,7 +53,7 @@ const Index = () => {
             >
               DT
             </motion.div>
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4 sm:space-x-6 ml-2 sm:ml-0">
               <motion.button
                 onClick={() => scrollToSection('about')}
                 className="hover:text-primary transition-colors"
@@ -87,7 +86,9 @@ const Index = () => {
               >
                 Contact
               </motion.button>
-              <ThemeToggle />
+              <div className="ml-2 sm:ml-0">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </div>

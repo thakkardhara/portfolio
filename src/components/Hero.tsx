@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, Mail } from 'lucide-react';
@@ -9,7 +8,9 @@ const Hero = () => {
     const link = document.createElement('a');
     link.href = '/Dhara.pdf';
     link.download = 'Dhara_Thakkar_Resume.pdf';
+    document.body.appendChild(link); // Attach to DOM
     link.click();
+    document.body.removeChild(link); // Clean up
   };
 
   const scrollToContact = () => {
