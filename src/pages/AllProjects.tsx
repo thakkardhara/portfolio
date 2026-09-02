@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const allProjects = [
     {
-  title: "INE International",
+  title: "INE International ", //comment added
   description: "Logistics and agriculture import-export platform built for INE International, showcasing services and analytics with a user-friendly interface.",
   techStack: ["Next.js", "Tailwind CSS", "Ant Design"],
   githubUrl: "https://github.com/ineinfo/ine-logistics",
