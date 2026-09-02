@@ -109,32 +109,36 @@ const Contact = () => {
 
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">thakkardhara508@gmail.com</p>
+                  <a href="mailto:thakkardhara508@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    thakkardhara508@gmail.com
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">+91 8347506153</p>
+                  <p className="font-medium">Phone / WhatsApp</p>
+                  <a href="tel:+918347506153" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    +91 8347506153
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-muted-foreground">Ahmedabad</p>
+                  <p className="text-muted-foreground text-sm">Ahmedabad, Gujarat, India</p>
                 </div>
               </div>
             </div>

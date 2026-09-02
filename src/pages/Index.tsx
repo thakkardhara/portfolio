@@ -53,18 +53,26 @@ const Index = () => {
             >
               DT
             </motion.div>
-            <div className="flex items-center space-x-4 sm:space-x-6 ml-2 sm:ml-0">
+            <div className="flex items-center space-x-3 sm:space-x-6 ml-2 sm:ml-0">
               <motion.button
                 onClick={() => scrollToSection('about')}
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors text-sm sm:text-base font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 About
               </motion.button>
               <motion.button
+                onClick={() => scrollToSection('skills')}
+                className="hover:text-primary transition-colors text-sm sm:text-base font-medium"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Skills
+              </motion.button>
+              <motion.button
                 onClick={() => scrollToSection('projects')}
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors text-sm sm:text-base font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -72,7 +80,7 @@ const Index = () => {
               </motion.button>
               <motion.button
                 onClick={() => scrollToSection('experience')}
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors text-sm sm:text-base font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -80,7 +88,7 @@ const Index = () => {
               </motion.button>
               <motion.button
                 onClick={() => scrollToSection('contact')}
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors text-sm sm:text-base font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -100,8 +108,8 @@ const Index = () => {
           <Hero />
         </div>
         <About />
-        <Projects />
         <Skills />
+        <Projects />
         <Experience />
         <Contact />
       </main>
@@ -136,7 +144,7 @@ const Index = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
-            © 2025 Dhara Thakkar.
+            © 2026 Dhara Thakkar. All rights reserved.
           </motion.p>
         </div>
       </footer>

@@ -3,36 +3,63 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const projects = [
+const featuredProjects = [
   {
-  title: "INE International",
-  description: "Logistics and agriculture import-export platform built for INE International, showcasing services and analytics with a user-friendly interface.",
-  techStack: ["Next.js", "Tailwind CSS", "Ant Design"],
-  githubUrl: "https://github.com/ineinfo/ine-logistics",
-  liveUrl: "https://www.ineinternational.in/",
-  image: "/logistics.png"
-},
+    title: "Shashwatam ERP",
+    category: "Enterprise Full Stack",
+    description: "Comprehensive enterprise resource planning system featuring full-stack architecture, modular REST APIs, role-based authentication, database-driven workflows, and query-optimized data retrieval.",
+    techStack: ["Node.js", "Express.js", "MySQL", "Sequelize ORM", "React.js", "REST APIs"],
+    githubUrl: "https://github.com/thakkardhara",
+    liveUrl: "https://dev.shasvatm.com/",
+    image: "/ERP.png"
+  },
+  {
+    title: "Shashwatam CRM",
+    category: "Business Application",
+    description: "Customer relationship and business workflow management application demonstrating customer data operations, REST API communication, authentication, and scalable client-server pipelines.",
+    techStack: ["Node.js", "Express.js", "MongoDB", "React.js", "JWT Auth", "REST APIs"],
+    githubUrl: "https://github.com/thakkardhara",
+    liveUrl: "https://sepl-crm.shasvatm.com/",
+    image: "/crm.png"
+  },
   {
     title: "Avoyes E-commerce",
-    description: "Full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.",
-    techStack: ["Next.js", "Node.js", "MySQL", "Express", "Stripe"],
+    category: "Full Stack E-Commerce",
+    description: "Full-stack e-commerce solution with Node.js/Express backend, MySQL database, Next.js frontend, Axios API integration, JWT authentication, and Stripe payment processing.",
+    techStack: ["Next.js", "Node.js", "Express.js", "MySQL", "Stripe", "Axios"],
     githubUrl: "https://github.com/ineinfo/avoyesfront",
-    // liveUrl: "https://demo-ecommerce.com",
     image: "/avoyes.png"
   },
-{
-  title: "INE Infotech",
-  description: "Official website for INE Infotech redesigned and developed after joining the company, featuring modern UI and responsive design.",
-  techStack: ["Next.js", "Tailwind CSS", "Ant Design"],
-  githubUrl: "https://github.com/ineinfo/ineinfotech",
-  liveUrl: "https://www.ineinfotech.com/",
-  image: "/infotech.png"
-},
-
-
+  {
+    title: "INE International Logistics",
+    category: "Logistics Platform",
+    description: "Logistics and agriculture import-export platform built with Next.js, featuring service analytics, email API integration, and responsive cross-device dashboards.",
+    techStack: ["Next.js", "Tailwind CSS", "Ant Design", "REST APIs"],
+    githubUrl: "https://github.com/ineinfo/ine-logistics",
+    liveUrl: "https://www.ineinternational.in/",
+    image: "/logistics.png"
+  },
+  {
+    title: "Invoice Generator Web App",
+    category: "Productivity & Billing",
+    description: "High-efficiency client invoicing system built with Next.js and Tailwind CSS featuring dynamic GST calculations, PDF export, status tracking, and NestJS/MongoDB backend integration.",
+    techStack: ["Next.js", "Tailwind CSS", "NestJS", "MongoDB", "REST APIs"],
+    githubUrl: "https://github.com/thakkardhara",
+    liveUrl: "https://github.com/thakkardhara",
+    image: "/e-comm.png"
+  },
+  {
+    title: "Chat N Chill (Real-Time Chat)",
+    category: "Real-Time System",
+    description: "Real-time communication application with user authentication, private messaging, and group chat channels built using WebSocket / Socket.io and MySQL data persistence.",
+    techStack: ["React.js", "Node.js", "Socket.io", "MySQL", "Tailwind CSS"],
+    githubUrl: "https://github.com/thakkardharaine",
+    liveUrl: "https://github.com/thakkardharaine",
+    image: "/chat-app.png"
+  }
 ];
 
 const Projects = () => {
@@ -42,80 +69,82 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
+            <Layers className="w-3.5 h-3.5" />
+            Featured Work
+          </div>
+          <h2 className="text-4xl font-bold mb-4">Featured Engineering Projects</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent work and technical expertise
+            Production-oriented applications showcasing backend architecture, API design, database workflows, and full-stack integration.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ 
-                scale: 1.05,
-                rotateY: 5,
-              }}
-              className="perspective-1000"
+              whileHover={{ y: -6 }}
             >
-              <Card className="h-full hover:shadow-2xl transition-all duration-300 group">
-                <div className="aspect-video bg-muted rounded-t-lg relative overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/20 to-blue-600/20 flex items-center justify-center">
-                    <motion.div 
-                      className="text-6xl opacity-80"
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                    </motion.div>
+              <Card className="h-full hover:shadow-2xl transition-all duration-300 group flex flex-col overflow-hidden border-border/80">
+                <div className="aspect-video bg-muted/60 relative overflow-hidden border-b border-border/50">
+                  <div className="w-full h-full bg-gradient-to-br from-primary/10 via-background to-blue-600/10 flex items-center justify-center">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    />
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                  <div className="absolute top-3 right-3">
+                    <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm text-xs font-medium border border-border/50 shadow-sm">
+                      {project.category}
+                    </Badge>
+                  </div>
                 </div>
-                <CardHeader>
+                <CardHeader className="pb-3">
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-1 flex flex-col">
-                  <p className="text-muted-foreground mb-4 flex-1">
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.techStack.map((tech, techIndex) => (
-                      <motion.div
-                        key={tech}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: false }}
-                        transition={{ delay: techIndex * 0.1 }}
-                      >
-                        <Badge variant="secondary" className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <div>
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {project.techStack.map((tech) => (
+                        <Badge 
+                          key={tech} 
+                          variant="secondary" 
+                          className="text-xs px-2.5 py-0.5 hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
                           {tech}
                         </Badge>
-                      </motion.div>
-                    ))}
-                  </div>
-                  <div className="flex gap-3">
-                    <Button size="sm" variant="outline" asChild className="hover:scale-105 transition-transform">
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                    <Button size="sm" asChild className="hover:scale-105 transition-transform">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
+                      ))}
+                    </div>
+                    <div className="flex gap-3 pt-2 border-t border-border/50">
+                      <Button size="sm" variant="outline" asChild className="flex-1 hover:scale-105 transition-transform text-xs">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-3.5 w-3.5 mr-1.5" />
+                          Code / Repo
+                        </a>
+                      </Button>
+                      {project.liveUrl && project.liveUrl.startsWith('http') && !project.liveUrl.includes('github.com') && (
+                        <Button size="sm" asChild className="flex-1 hover:scale-105 transition-transform text-xs">
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                            Live Demo
+                          </a>
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -127,13 +156,13 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-14"
         >
-          <Button asChild size="lg" className="hover:scale-105 transition-transform">
+          <Button asChild size="lg" className="hover:scale-105 transition-transform px-8 shadow-md">
             <Link to="/projects">
-              View All Projects
+              Explore All 12 Projects
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
